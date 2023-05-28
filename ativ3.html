@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>appendChild</title>
+
+<style>
+    body {
+        background-color: rgba(133, 137, 140, 0.37);
+        font-family: 'Courier New', Courier, monospace;
+    }
+    .center {
+        border: 1px solid red;
+        padding: 15px;
+        width: 700px;
+        background-color: rgb(198, 193, 193);
+    }
+    .botao {
+        border-radius: 5px;
+       width: 240px;
+       height: 20px;
+    }
+</style>
+</head>
+<body>
+ <div class="center">
+    <h1>Java Script - Atividade 3 (appendChild)</h1>
+
+    <h2>Escolha uma linguagem:</h2>
+    <input type="text" id="itemText" placeholder="Adicionar texto..." class="botao"> <br>
+    <p>Escolha uma cor:</p>
+
+
+    <input type="radio" name="cores" value="hotpink">
+    <label for="cores">Rosa</label>
+
+    <input type="radio" name="cores" value="gray">
+    <label for="cores">Cinza</label>
+
+    <input type="radio" name="cores" value="brown">
+    <label for="cores">Marrom</label><br><br>
+
+    <button onclick="myFunction()">Adicionar Item</button>
+
+   <ul id="myList">
+    <li>PHP</li>
+    <li>Python</li>
+    <li>Java</li>
+   </ul>
+ </div>
+
+ <script>
+   function myFunction() {
+    var itemText = document.getElementById("itemText").value;
+    var cor = document.querySelector('input[name="cores"]:checked').value;
+    var li = document.createElement("li");
+
+    var textNode = document.createTextNode(itemText);
+    li.appendChild(textNode);
+
+    li.style.color = cor;
+
+    document.getElementById("myList").appendChild(li);
+ }
+ </script>
+
+
+
+</body>
+</html>

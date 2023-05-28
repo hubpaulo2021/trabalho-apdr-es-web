@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 2</title>
+    <style>
+        body {
+            background-color: rgba(133, 137, 140, 0.37);
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .azul {
+            color: blue;
+            text-align: center;
+            font-size: 30px;
+            background-color: white;
+        }
+        .vermelho{
+            color: red;
+            text-align: center;
+            font-size: 30px;
+            background-color: white;
+
+        }
+        p{ background-color: white;
+            text-align: center;
+            font-size: 30px;
+           
+
+            
+        }
+        a:link {
+  border: 1px solid black;
+ border-radius: 5px;
+ padding: 5px;
+ margin: 20px;
+ font-family: 'Courier New', Courier, monospace;
+ background-color: rgb(255, 255, 255);
+ width: 120px;
+ color:gray;
+ text-decoration: none;
+}
+
+    </style>
+</head>
+<body>
+    <p>Sua média è:<span id="resultado"></span></p></p>
+
+    <script>
+        let nota1 = parseFloat(prompt("Nota 1:"));
+        let nota2 = parseFloat(prompt("Nota 2:"));
+        let calcularMedia = (nota1 + nota2) / 2;
+
+       
+       
+
+        if (calcularMedia >= 6) {
+            situacao = "Aprovado";
+            resultado.className = "azul";
+        } else {
+            situacao = "Reprovado";
+            resultado.className = "vermelho";
+        }
+
+        resultado.innerHTML = + calcularMedia.toFixed(2) + " - " + situacao;
+    </script>
+      <a href="ativ2.html">Atividade 2</a>
+</body>
+</html>

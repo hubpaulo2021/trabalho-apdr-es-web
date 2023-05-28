@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script</title>
+   <link rel="stylesheet" href="style.css">
+    <style>
+      
+    
+    </style>
+</head>
+<body>
+    <div class="principal">
+        <h1>Calculadora de Média</h1>
+        <br>
+        <label for="nota1" class="item">Nota 1:</label><br>
+        <input type="number" id="nota1" placeholder="Digite sua nota..." class="entrada" required><br><br>
+
+        <label for="nota2" class="item">Nota 2:</label><br>
+        <input type="number" id="nota2" placeholder="Digite sua nota..." class="entrada" required><br>
+
+        <button class="botao" onclick="calcularMedia()">Calcular Média</button>
+        <p id="resultado" class="resultado"><span id="media"></span></p>
+
+        <script>
+            function calcularMedia() {
+                let nota1 = parseFloat(document.getElementById("nota1").value);
+                let nota2 = parseFloat(document.getElementById("nota2").value);
+
+                let media = (nota1 + nota2) / 2;
+              
+
+               
+                if (media >= 6) {
+                    situacao = "Aprovado";
+                    resultado.className = "azul";
+                } else {
+                    situacao = "Reprovado";
+                    resultado.className = "vermelho";
+                }
+
+                resultado.innerHTML = "Média: " + media.toFixed(2) + " - " + situacao;
+            }
+        </script>
+        
+    </div>
+  
+    <a href="index1.html">Atividade 1B</a>
+    
+  
+    
+
+
+
+     
+</body>
+</html>

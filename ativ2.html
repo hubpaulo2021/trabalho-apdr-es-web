@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade JS</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .verde {
+            font-family: 'Courier New', Courier, monospace;
+            color: green;
+        }
+        .laranja {
+            color: rgb(255, 117, 5);
+        }
+        .vermelho {
+            color: red;
+        }
+
+    </style>
+</head>
+<body> 
+    <div class="principal">
+        <h1>Calculadora de IMC</h1>
+        <br>
+        <label for="peso" class="item">Peso:</label><br>
+        <input type="number" id="peso" placeholder="Digite seu peso..." class="entrada" required><br><br>
+
+        <label for="altura" class="item">Altura:</label><br>
+        <input type="number" id="altura" placeholder="Digite sua altura..." class="entrada" required><br>
+
+        <button class="botao" onclick="calcularIMC()">Calcular IMC</button>
+        <p id="resultado" class="resultado"><span id="IMC"></span></p>
+
+        <script>
+            function calcularIMC() {
+                let peso = parseFloat(document.getElementById("peso").value);
+                let altura = parseFloat(document.getElementById("altura").value);
+
+                let IMC = peso / (altura * altura);
+                document.getElementById("resultado").innerHTML = IMC.toFixed(2);
+                let situacao = "";
+        
+                if (IMC >= 18.5) {
+                    situacao = "IMC Normal";
+                    resultado.className = "verde";
+                } 
+                if (IMC < 18.5) {
+                    situacao = "Abaixo do peso";
+                    resultado.className = "laranja";
+                } 
+                if (IMC > 25) {
+                    situacao = "Excesso de peso";
+                    resultado.className = "laranja";
+                } 
+                if (IMC > 30) {
+                    situacao = "Obsidade classe 1";
+                    resultado.className = "vermelho";
+                } 
+                if (IMC > 35) {
+                    situacao = "Obsidade classe 2";
+                    resultado.className = "vermelho";
+                } 
+                if (IMC >= 40) {
+                    situacao = "Obsidade classe 3";
+                    resultado.className = "vermelho";
+                } 
+             
+
+                resultado.innerHTML = "IMC: " + IMC.toFixed(2) + " - " + situacao;
+            }
+        </script>
+    </div>
+</body>
+</html>
+    <a href="ativ3.html">Atividade 3</a>
+  </body>
+</html>
